@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 
 const MovieList = props => {
+  console.log('movie list props', props);
   const [movies, setMovies] = useState([])
   useEffect(() => {
     const getMovies = () => {
@@ -41,7 +42,6 @@ function MovieDetails({ movie }) {
           Metascore: <strong>{metascore}</strong>
         </div>
         <h3>Actors</h3>
-
         {stars.map(star => (
           <div key={star} className="movie-star">
             {star}
